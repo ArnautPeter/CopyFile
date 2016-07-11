@@ -34,8 +34,8 @@ public class CopyBytes {
 
     private static void writeToFile(byte[] arr, File file) {
 
-        try (FileOutputStream outputStream = new FileOutputStream(file)){
-            for (byte b : arr){
+        try (FileOutputStream outputStream = new FileOutputStream(file)) {
+            for (byte b : arr) {
                 outputStream.write(b);
             }
         } catch (FileNotFoundException e) {

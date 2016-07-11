@@ -11,7 +11,7 @@ public class CopyLines {
         BufferedWriter writer = new BufferedWriter(fileWriter);
 
         String line;
-        while((line = reader.readLine()) != null) {
+        while ((line = reader.readLine()) != null) {
 
             String[] arr = line.split(" ");
             for (String word : arr) {

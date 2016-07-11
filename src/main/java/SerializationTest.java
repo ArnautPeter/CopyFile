@@ -4,8 +4,9 @@ public class SerializationTest {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
-        Dog dog = new Dog("Sharik", 5);
-        //serializeDog(dog);
+        Owner owner = new Owner("Mike", "Ghj", 25);
+        Dog dog = new Dog("Sharik", 5, owner);
+        serializeDog(dog);
         Dog dogDeser = deserializeDog();
         System.out.println(dogDeser.toString());
     }
@@ -25,6 +26,6 @@ public class SerializationTest {
 
         FileInputStream fileInputStream = new FileInputStream("e:\\dog.ser");
         ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-        return (Dog)objectInputStream.readObject();
+        return (Dog) objectInputStream.readObject();
     }
 }
